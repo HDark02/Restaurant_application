@@ -87,14 +87,23 @@ class Restaurant(MDApp):
                 }
         try:
             all=screen_manager.get_screen("Acceuil").navig.profile_id.data.data1.data2
+            print(1)
             all.user_name.text = data["nom"]
+            print(1)
             all.user_number.text = data["number"]
+            print(1)
             all.user_photo.source = data["photo"]
+            print(1)
             screen_manager.get_screen("Acceuil").navig.home_id.home_data.home_data1.home_data2.user_name_and_salut.text = f"Salut {data['nom']}"
-            screen_manager.get_screen("Acceuil").navig.home_id.home_data.home_data1.home_data2.user_photo.source = data["photo"]
+            print(1)
+            screen_manager.get_screen("Acceuil").navig.home_id.home_data.home_data1.home_data2.picture.source = data["photo"]
+            print(1)
             screen_manager.transition.direction = "left"
+            print(1)
             screen_manager.current = "Acceuil"
+            print(1)
             toast(f"Connecté...", duration=1)
+            print(1)
             with open("user_data.json", "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
         except:
