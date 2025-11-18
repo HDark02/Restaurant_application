@@ -1,17 +1,9 @@
-from kivymd.uix.list import OneLineIconListItem
 from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.core.window import Window
-# from datetime import date, datetime
 from plyer import filechooser
 from kivymd.uix.screenmanager import ScreenManager
-from kivymd.uix.list import OneLineListItem, TwoLineListItem,OneLineAvatarIconListItem
-# from kivy.properties import StringProperty, NumericProperty
-import pandas as pd
-from datetime import datetime
-# from kivymd.toast.androidtoast import androidtoast
 from kivymd.toast.kivytoast.kivytoast import toast
-from info_1 import name, mot_passe
 Window.keyboard_anim_args ={'d': .2, 't': 'in_out_expo'}
 Window.softinput_mode = "below_target"
 import json
@@ -21,9 +13,6 @@ class Restaurant(MDApp):
         try:
             with open("user_data.json", "r", encoding="utf-8") as f:
                 data = json.load(f)
-                # screen_manager.get_screen("Acceuil").navig.profile_id.data.data1.data2.user_name.text = data["nom"]
-                # screen_manager.get_screen("Acceuil").navig.profile_id.data.data1.data2.user_photo.source = data["photo"]
-                
                 all=screen_manager.get_screen("Acceuil").navig.profile_id.data.data1.data2
                 all.user_name.text = data["nom"]
                 all.user_number.text = data["number"]
