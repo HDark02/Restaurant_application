@@ -44,10 +44,10 @@ requirements = python3,kivy==2.1.0, kivymd==1.1.1, sdl2_ttf==2.0.15, pillow, ply
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = "Chef Restaurant.png"
+presplash.filename = Chef_Restaurant.png
 
 # (str) Icon of the application
-icon.filename = "Chef Restaurant.png"
+icon.filename = Chef_Restaurant.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
