@@ -1,0 +1,70 @@
+MDScreen:
+    name: "welcome"
+	MDFloatLayout:
+    	pos_hint: {"center_x": .5, "center_y": .5}
+        FitImage:
+            source: "chez_brim_image.png"
+            pos_hint: {"center_x": .5, "center_y": .5}
+        MDFloatLayout:
+        	md_bg_color: 0, 0, 0, 0.5
+    	    pos_hint: {"center_x": .5, "center_y": .5}
+            MDFloatLayout:
+            	md_bg_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .8}
+                radius: [20, ]
+                size_hint: .3, .15
+                Image:
+                    md_bg_color: "white"
+                    source: "Chef Restaurant.png"
+                    # size_hint: .25, .15
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    
+            MDLabel:
+                text: "chez Brïm".upper()
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .65}
+                halign: "center"
+                bold: True
+                font_size: "35sp"
+            MDLabel:
+                text: "Votre nourriture préférée"
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .6}
+                halign: "center"
+                font_size: "18sp"
+                opacity: 5
+            MDLabel:
+                text: "Livraison rapide"
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .48}
+                halign: "center"
+                bold: True
+                font_size: "20sp"
+                opacity: 5
+            MDLabel:
+                text: "Découvrez les meilleurs restaurants près de chez vous et commandez en quelques clics"
+                theme_text_color: "Custom"
+                text_color: "white"
+                pos_hint: {"center_x": .5, "center_y": .4}
+                halign: "center"
+                # bold: True
+                size_hint_x: .9
+                font_size: "18sp"
+                opacity: 5
+            
+            MDRaisedButton:
+                text: "Commencer"
+                pos_hint: {"center_x": .5, "center_y": .25}
+                halign: "center"
+                font_size: "25sp"
+                bold: True
+                size_hint: .8, .07
+                theme_text_color: "Custom"
+                text_color: "black"
+                opacity: 3
+                radius: [20, ]
+                md_bg_color: 1, 1,  0.6, 1
+                on_release: app.login(id=4)
