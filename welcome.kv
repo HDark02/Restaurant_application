@@ -8,16 +8,12 @@ MDScreen:
         MDFloatLayout:
         	md_bg_color: 0, 0, 0, 0.5
     	    pos_hint: {"center_x": .5, "center_y": .5}
-            MDFloatLayout:
-            	md_bg_color: "white"
-                pos_hint: {"center_x": .5, "center_y": .8}
+            FitImage:
+                md_bg_color: "white"
                 radius: [20, ]
                 size_hint: .3, .15
-                FitImage:
-                    md_bg_color: "white"
-                    radius: [20, ]
-                    source: "Chef_Restaurant.png"
-                    pos_hint: {"center_x": .5, "center_y": .5}
+                source: "Chef_Restaurant.png"
+                pos_hint: {"center_x": .5, "center_y": .8}
                     
             MDLabel:
                 text: "chez Brïm".upper()
