@@ -4,6 +4,12 @@ from kivy.core.window import Window
 from plyer import filechooser
 from kivymd.uix.screenmanager import ScreenManager
 from kivymd.toast.kivytoast.kivytoast import toast
+from android.permissions import request_permissions, Permission
+
+request_permissions([
+    Permission.READ_EXTERNAL_STORAGE,
+    Permission.WRITE_EXTERNAL_STORAGE
+])
 Window.keyboard_anim_args ={'d': .2, 't': 'in_out_expo'}
 Window.softinput_mode = "below_target"
 import json
@@ -116,3 +122,4 @@ class Restaurant(MDApp):
             screen_manager.get_screen("sign_up").picture.source =image_profile
 if __name__=="__main__":
     Restaurant().run()
+
